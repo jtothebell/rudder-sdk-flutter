@@ -7,16 +7,20 @@ issue_tracker: https://github.com/rudderlabs/rudder-sdk-flutter/issues
 documentation: https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-flutter-sdk
 
 environment:
-  sdk: '>=2.17.6 <3.0.0'
+  sdk: ">=2.17.6 <3.0.0"
   flutter: ">=2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  rudder_sdk_flutter_platform_interface: ^2.6.0
-  rudder_plugin_android: ^2.5.0
-  rudder_plugin_ios: ^2.5.0
-  rudder_plugin_web: ^2.4.1
+  rudder_sdk_flutter_platform_interface:
+    path: ../rudder_plugin_interface
+  rudder_plugin_android:
+    path: ../rudder_plugin_android
+  rudder_plugin_ios:
+    path: ../rudder_plugin_ios
+  rudder_plugin_web:
+    path: ../rudder_plugin_web
 dev_dependencies:
   flutter_lints: ^2.0.1
   dart_code_metrics: ^4.17.1
