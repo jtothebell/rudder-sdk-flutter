@@ -36,3 +36,12 @@ external String? getAnonymousId();
 
 @JS("rudderanalytics.getUserTraits")
 external dynamic getUserTraits();
+
+@JS("rudderanalytics.getSessionId")
+external dynamic getSessionId();
+
+@JS("rudderanalytics.startSession")
+external startSession(int? sessionId);
+
+@JS("rudderanalytics.endSession")
+external endSession();

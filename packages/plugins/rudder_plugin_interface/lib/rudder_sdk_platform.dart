@@ -87,4 +87,17 @@ abstract class RudderSdkPlatform extends PlatformInterface {
   Future<Map?> getRudderContext() async {
     throw UnimplementedError('getRudderContext() has not been implemented.');
   }
+
+  int getSessionId() {
+    throw UnimplementedError('getSessionId() has not been implemented.');
+  }
+
+  void startSession(int? sessionId) {
+    throw UnimplementedError(
+        'startSession(int? sessionid) has not been implemented.');
+  }
+
+  void endSession() {
+    throw UnimplementedError('endSession() has not been implemented.');
+  }
 }

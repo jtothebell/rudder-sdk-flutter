@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:js/js_util.dart' as js;
+
 // In order to *not* need this ignore, consider extracting the "web" version
 // of your plugin as a separate package, instead of inlining it in the same
 // package as the core of your plugin.
@@ -7,6 +7,7 @@ import 'package:js/js_util.dart' as js;
 // import 'dart:html' as html show window;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+import 'package:js/js_util.dart' as js;
 import 'package:rudder_sdk_flutter_platform_interface/platform.dart';
 import 'package:rudder_sdk_flutter_platform_interface/rudder_sdk_platform.dart';
 
@@ -126,6 +127,21 @@ class RudderSdkFlutterWeb extends RudderSdkPlatform {
   @override
   void putAnonymousId(String anonymousId) {
     web_js.setAnonymousId(anonymousId);
+  }
+
+  @override
+  int getSessionId() {
+    return web_js.getSessionId();
+  }
+
+  @override
+  void startSession(int? sessionId) {
+    web_js.startSession(sessionId);
+  }
+
+  @override
+  void endSession() {
+    web_js.endSession();
   }
 
   @override
